@@ -62,9 +62,13 @@ class uploadDemo:
 
 def do_upload(filename):
     ssh = paramiko.SSHClient()
+    host = ''
+    port = 22
+    username = 'meirtz'
+    password = ''
     # 这行代码的作用是允许连接不在know_hosts文件中的主机。
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect("221.122.128.54", 31011, "meirtz", "594249q")
+    ssh.connect(host, port, username, password)
     stdin, stdout, stderr = ssh.exec_command('ls')
     print(stdout.readlines())
     sftp = paramiko.SFTPClient.from_transport(ssh.get_transport())
