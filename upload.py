@@ -77,8 +77,6 @@ def do_upload(filename):
     print(filename)
     print(file_name)
     sftp.put(filename, "/home/meirtz/hackathon/" + file_name)
-    # shell = "scp -P 31011 " + "/Users/apple/Downloads/upload.py" + \
-    #         " meirtz@221.122.128.54:/home/meirtz/hackathon/"
     print('finish')
 
 
