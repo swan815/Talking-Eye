@@ -64,7 +64,7 @@ def do_upload(filename):
     ssh = paramiko.SSHClient()
     host = ''
     port = 22
-    username = 'meirtz'
+    username = ''
     password = ''
     # 这行代码的作用是允许连接不在know_hosts文件中的主机。
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
